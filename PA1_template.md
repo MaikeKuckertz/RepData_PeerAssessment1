@@ -149,7 +149,7 @@ newStepsPerDay <- summarize(group_by(newActivity, date), steps=sum(steps))
 hist(newStepsPerDay$steps, col="blue", breaks = 20, xlab = "Amount of steps per day", main = "Histogram of avg. number of steps per day, with cleaned data")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk histogramWithoutMissingData](figure/histogramWithoutMissingData-1.png)
 
 
 ##5. Are there differences in activity patterns between weekdays and weekends?
@@ -181,4 +181,4 @@ library(lattice)
 xyplot(steps~interval|dayType, data=newStepsPerInterval, type = "l", xlab = "Interval", ylab = "Number of steps", layout = c(1, 2))
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
+![plot of chunk plotWeekdayWeekend](figure/plotWeekdayWeekend-1.png)
